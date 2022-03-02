@@ -3,9 +3,12 @@
     <mat-card class="mat-elevation-z8 services-container">
       <mat-card-title>Services</mat-card-title>
       <mat-card-content>
-        <mat-selection-list #shoes>
-          <mat-list-option *ngFor="let shoe of typesOfShoes">
-            {{ shoe }}
+        <mat-selection-list #services>
+          <mat-list-option
+            *ngFor="let service of typesOfServices"
+            color="primary"
+          >
+            {{ service }}
             <mat-divider></mat-divider>
           </mat-list-option>
         </mat-selection-list>
@@ -14,17 +17,19 @@
       </mat-card-content>
       <br />
       <br />
-      <mat-card-title> Standard Fees </mat-card-title>
+      <mat-card-title>Standard Fees</mat-card-title>
       <br />
       <mat-card-content class="fees-container">
         <form>
           <mat-form-field class="fees-input" appearance="fill">
             <mat-label>Parts</mat-label>
+            <span matPrefix>$ &nbsp;</span>
             <input matInput placeholder="Enter Value" />
           </mat-form-field>
           <br />
           <mat-form-field class="fees-input" appearance="fill">
             <mat-label>Labor</mat-label>
+            <span matPrefix>$ &nbsp;</span>
             <input matInput placeholder="Hours of Laber @ $50.00/hr" />
           </mat-form-field>
         </form>

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
   constructor() {}
 
-  typesOfShoes: string[] = [
+  typesOfServices: string[] = [
     'Password Reset ($39.99)',
     'Spyware Removal ($99.99)',
     'RAM Upgrade ($129.99)',
