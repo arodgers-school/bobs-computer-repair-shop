@@ -1,14 +1,35 @@
-<div fxLayout="row wrap">
-  <div fxFlex class="white">
-    <div fxLayout="column">
-      <h1>test</h1>
-    </div>
-  </div>
-  <div fxFlex class="white mat-elevation-z4">
-    <h1>test2</h1>
-    <br />
-    <br />
-    <br />
-    <br />
+<div fxLayout="column">
+  <div fxFlex>
+    <mat-card class="mat-elevation-z8 services-container">
+      <mat-card-title>Services</mat-card-title>
+      <mat-card-content>
+        <mat-selection-list #shoes>
+          <mat-list-option *ngFor="let shoe of typesOfShoes">
+            {{ shoe }}
+            <mat-divider></mat-divider>
+          </mat-list-option>
+        </mat-selection-list>
+
+        <!-- <p>Options selected: {{ shoes.selectedOptions.selected.length }}</p> -->
+      </mat-card-content>
+      <br />
+      <br />
+      <mat-card-title> Standard Fees </mat-card-title>
+      <br />
+      <mat-card-content class="fees-container">
+        <form>
+          <mat-form-field class="fees-input" appearance="fill">
+            <mat-label>Parts</mat-label>
+            <input matInput placeholder="Enter Value" />
+          </mat-form-field>
+          <br />
+          <mat-form-field class="fees-input" appearance="fill">
+            <mat-label>Labor</mat-label>
+            <input matInput placeholder="Hours of Laber @ $50.00/hr" />
+          </mat-form-field>
+        </form>
+        <button mat-stroked-button color="primary">Calculate</button>
+      </mat-card-content>
+    </mat-card>
   </div>
 </div>

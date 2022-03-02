@@ -1,3 +1,26 @@
 .white {
   background-color: #fff;
 }
+
+.services-container {
+  width: 30%;
+  margin: 15% auto;
+}
+
+.services-container > mat-card-title,
+mat-card-subtitle {
+  text-align: center;
+}
+
+.fees-container {
+  text-align: center;
+}
+
+.fees-input {
+  max-width: 350px;
+  min-width: 100px;
+}
+
+mat-form-field {
+  width: 50%;
+}
