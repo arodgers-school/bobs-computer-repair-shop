@@ -3,59 +3,37 @@
 
 import { Component, OnInit } from '@angular/core';
 
+export default class Service {
+  id: string;
+  name: string;
+  price: number;
+  constructor(id: string, name: string, price: number) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+  }
+}
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
-  constructor() {}
-
-  submit() {
-    console.log(this.selectedServices);
+  serviceList: Array<Service>;
+  constructor() {
+    this.serviceList = [
+      new Service('passwordReset', 'Password Reset', 39.99),
+      new Service('spywareRemoval', 'Spyware Removal', 99.99),
+      new Service('ramUpgrade', 'RAM Upgrade', 129.99),
+      new Service('softwareInstall', 'Software Installation', 49.99),
+      new Service('tuneUp', 'Tune-up', 89.99),
+      new Service('keyboardCleaning', 'Keyboard Cleaning', 45.0),
+      new Service('diskCleanUp', 'Disk Clean-up', 149.99),
+    ];
   }
 
-  typesOfServices: {
-    id: string;
-    name: string;
-    price: number;
-  }[] = [
-    {
-      id: 'passwordReset',
-      name: 'Password Reset',
-      price: 39.99,
-    },
-    {
-      id: 'spywareRemoval',
-      name: 'Spyware Removal',
-      price: 99.99,
-    },
-    {
-      id: 'ramUpgrade',
-      name: 'RAM Upgrade',
-      price: 129.99,
-    },
-    {
-      id: 'softwareInstall',
-      name: 'Software Installation',
-      price: 49.99,
-    },
-    {
-      id: 'tuneUp',
-      name: 'Tune-up',
-      price: 89.99,
-    },
-    {
-      id: 'keyboardCleaning',
-      name: 'Keyboard Cleaning',
-      price: 45.0,
-    },
-    {
-      id: 'diskCleanUp',
-      name: 'Disk Clean-up',
-      price: 149.99,
-    },
-  ];
+  submit() {}
 
   selectedServices: string[];
 

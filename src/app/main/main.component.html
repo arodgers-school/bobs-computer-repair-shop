@@ -5,7 +5,7 @@
       <mat-card-content>
         <mat-selection-list #services [(ngModel)]="selectedServices">
           <mat-list-option
-            *ngFor="let service of typesOfServices"
+            *ngFor="let service of serviceList"
             [value]="service"
             color="primary"
           >
