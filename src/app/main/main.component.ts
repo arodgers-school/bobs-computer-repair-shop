@@ -15,6 +15,10 @@ export class MainComponent implements OnInit {
     console.log(this.selectedServices);
   }
 
+  onNgModelChange($event) {
+    console.log($event);
+  }
+
   typesOfServices: {
     id: string;
     name: string;
