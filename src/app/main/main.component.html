@@ -3,12 +3,13 @@
     <mat-card class="mat-elevation-z8 services-container">
       <mat-card-title>Services</mat-card-title>
       <mat-card-content>
-        <mat-selection-list #services>
+        <mat-selection-list #services [(ngModel)]="selectedServices">
           <mat-list-option
             *ngFor="let service of typesOfServices"
+            [value]="service"
             color="primary"
           >
-            {{ service }}
+            {{ service.name }} (${{ service.price | number: "1.2-2" }})
             <mat-divider></mat-divider>
           </mat-list-option>
         </mat-selection-list>
@@ -33,7 +34,9 @@
             <input matInput placeholder="Hours of Laber @ $50.00/hr" />
           </mat-form-field>
         </form>
-        <button mat-stroked-button color="primary">Calculate</button>
+        <button mat-stroked-button color="primary" (click)="submit()">
+          Order Services
+        </button>
       </mat-card-content>
     </mat-card>
   </div>
