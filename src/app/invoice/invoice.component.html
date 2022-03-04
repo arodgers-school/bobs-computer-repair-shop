@@ -1,1 +1,34 @@
-<p>invoice works!</p>
+<div fxLayout="column">
+  <div fxFlex>
+    <mat-card class="mat-elevation-z8 invoice-container">
+      <mat-card-title>Invoice</mat-card-title>
+      <mat-card-content>
+        <mat-selection-list>
+          <mat-list-option color="primary">
+            <mat-divider></mat-divider>
+          </mat-list-option>
+        </mat-selection-list>
+      </mat-card-content>
+      <br />
+      <br />
+      <mat-card-title>Standard Fees</mat-card-title>
+      <br />
+      <mat-card-content class="fees-container">
+        <form>
+          <mat-form-field class="fees-input" appearance="fill">
+            <mat-label>Parts</mat-label>
+            <span matPrefix>$ &nbsp;</span>
+            <input matInput placeholder="Enter Value" />
+          </mat-form-field>
+          <br />
+          <mat-form-field class="fees-input" appearance="fill">
+            <mat-label>Labor</mat-label>
+            <span matPrefix>$ &nbsp;</span>
+            <input matInput placeholder="Hours of Laber @ $50.00/hr" />
+          </mat-form-field>
+        </form>
+        <button mat-stroked-button color="primary">Order Services</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
