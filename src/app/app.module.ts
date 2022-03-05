@@ -19,9 +19,11 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { InvoiceDialogComponent } from './invoice-dialog/invoice-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, BaseLayoutComponent, InvoiceDialogComponent],
+  declarations: [AppComponent, BaseLayoutComponent, InvoiceDialogComponent, ContactComponent, AboutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
