@@ -43,7 +43,7 @@
     <mat-list-item>
       <mat-icon mat-list-icon>build</mat-icon>
       <div mat-line>
-        Labor Cost: {{ invoice.getLaborAmount() | number: "1.2-2" }}
+        Labor Cost: {{ invoice.getLaborAmount() * 50 | number: "1.2-2" }}
       </div>
     </mat-list-item>
     <mat-divider></mat-divider>

@@ -9,7 +9,7 @@
             [name]="service.name"
           >
             <mat-list-option color="primary" value="{{ service.price }}">
-              {{ service.name }} (${{ service.price }})
+              {{ service.name }} (${{ service.price | number: "1.2-2" }})
               <mat-divider></mat-divider>
             </mat-list-option>
           </mat-selection-list>
@@ -26,8 +26,8 @@
               <input
                 matInput
                 [(ngModel)]="invoice.partsAmount"
-                name="parts"
                 placeholder="Enter Value"
+                name="parts"
               />
             </mat-form-field>
             <br />
@@ -36,9 +36,9 @@
               <span matPrefix>$ &nbsp;</span>
               <input
                 matInput
+                placeholder="Hours of Laber @ $50.00/hr"
                 [(ngModel)]="invoice.laborAmount"
                 name="labor"
-                placeholder="Hours of Laber @ $50.00/hr"
               />
             </mat-form-field>
           </form>

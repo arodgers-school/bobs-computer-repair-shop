@@ -7,8 +7,8 @@ export class Invoice {
 
   constructor() {
     this.serviceItems = [];
-    this.partsAmount = 0;
-    this.laborAmount = 0;
+    this.partsAmount;
+    this.laborAmount;
   }
 
   addServiceItem(serviceItem: ServiceItem): void {
