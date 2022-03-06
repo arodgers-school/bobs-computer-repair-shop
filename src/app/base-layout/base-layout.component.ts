@@ -28,6 +28,7 @@ export class BaseLayoutComponent implements OnInit {
     for (let item of this.services) {
       item.checked = false;
     }
+    this.invoice = new Invoice();
   }
 
   submit(): void {
@@ -43,6 +44,15 @@ export class BaseLayoutComponent implements OnInit {
       },
       disableClose: true,
       width: '600px',
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result === 'confirm') {
+        alert('Order confirmed!');
+        this.clearInvoice();
+      } else {
+        alert('Order canceled!');
+        this.clearInvoice();
+      }
     });
   }
 }
