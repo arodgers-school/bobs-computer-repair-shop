@@ -1,6 +1,19 @@
+/*
+Title: 
+    Assignment 9.3
+Author: 
+    Adam Rodgers
+Date: 
+    3/2/2022
+Modified By: Adam Rodgers
+Description: Bob's Computer Repair Shop
+Resources:
+    Bellevue University WEB425 Github Repo
+    https://material.angular.io/components/categories
+*/
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,7 +36,13 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, BaseLayoutComponent, InvoiceDialogComponent, ContactComponent, AboutComponent],
+  declarations: [
+    AppComponent,
+    BaseLayoutComponent,
+    InvoiceDialogComponent,
+    ContactComponent,
+    AboutComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
